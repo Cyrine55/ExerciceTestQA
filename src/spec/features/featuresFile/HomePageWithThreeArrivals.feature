@@ -1,13 +1,13 @@
 
-@HomePageWithThreeSliders
+@HomePageWithThreeArrivals
 Feature: HomePageWithThreeSliders
   Utilisateur veut vérifier la page accuiel contient trois sliders
 
-  @HomePageWithThreeSliders
-  Scenario: Page Acceuil contient trois slider
+  @HomePageWithThreeArrivals
+  Scenario: Page Acceuil contient trois arrivals
     Given Ouvrir application
     When Cliquer sur le bouton menu Shop 
     And Cliquer sur le bouton menu Home
-    Then I validate the outcomes with '3' sliders
+    Then I validate the outcomes with '3' arrivals
   
 

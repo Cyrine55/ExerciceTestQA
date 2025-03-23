@@ -19,11 +19,15 @@ public class HomePage extends BasePage {
 	private static WebElement homeBtn;
 	@FindBy(how = How.XPATH, using = "//div[@id='n2-ss-6-arrow-next']")
 	private static WebElement arrowIcon;
-	@FindBy(how = How.XPATH, using = "//img[@class='n2-ss-slide-background-image n2-ss-slide-fill n2-ow']")
-	private static WebElement backgroundImg;
 	
 	@FindBy(how = How.CSS, using = ".n2-ss-slide-background-image")
 	private static List<WebElement> listSliders;
+	@FindBy(how = How.CSS, using = ".themify_builder_sub_row.clearfix.gutter-default")
+	private static List<WebElement> listArrivals;
+	
+	
+	
+	
 	public HomePage() {
 		super(Setup.getDriver());
 		seleniumUtils = new SeleniumUtils();
@@ -49,4 +53,15 @@ public class HomePage extends BasePage {
 		
 	}
 
+	public int validateArrivals() {
+		int arrivalList=0;
+		for(WebElement sizeArrival:listArrivals) {
+			
+			return listArrivals.size();
+		}
+		return arrivalList;
+		
+	}
+	
+	
 }
